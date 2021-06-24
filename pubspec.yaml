@@ -1,0 +1,75 @@
+name: sample_app
+description: A new Flutter project.
+publish_to: 'none'
+version: 1.0.0+1
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  # state manager
+  get: ^4.1.4
+  # immutable support
+  freezed: ^0.14.2
+  freezed_annotation: ^0.14.2
+  # flavor setting
+  flutter_flavor: ^2.0.0
+  flutter_flavorizr: ^2.0.0
+  # app icon
+  flutter_launcher_icons: ^0.9.0
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+# icon setting
+flutter_icons:
+  image_path: "assets/images/appicon.png"
+  image_path_android: "assets/images/app_icon/icon.png"
+  image_path_ios: "assets/images/app_icon/icon.png"
+  adaptive_icon_background: "assets/images/app_icon/background.png"
+  adaptive_icon_foreground: "assets/images/app_icon/foreground.png"
+  remove_alpha_ios: true
+  android: true
+  ios: true
+flutter:
+  uses-material-design: true
+# flavor setting
+flavorizr:
+  app:
+    android:
+      flavorDimensions: "flavor-type"
+    ios:
+  flavors:
+    dev:
+      app:
+        name: "App(dev)"
+      android:
+        applicationId: "com.example.dev"
+        firebase:
+          config: ".firebase/dev/google-services.json"
+      ios:
+        bundleId: "com.example.dev"
+        firebase:
+          config: ".firebase/dev/GoogleService-Info.plist"
+    stg:
+      app:
+        name: "App(stg)"
+      android:
+        applicationId: "com.example.stg"
+        firebase:
+          config: ".firebase/stg/google-services.json"
+      ios:
+        bundleId: "com.example.stg"
+        firebase:
+          config: ".firebase/stg/GoogleService-Info.plist"
+    prod:
+      app:
+        name: "App"
+      android:
+        applicationId: "com.example"
+        firebase:
+          config: ".firebase/prod/google-services.json"
+      ios:
+        bundleId: "com.example"
+        firebase:
+          config: ".firebase/prod/GoogleService-Info.plist"

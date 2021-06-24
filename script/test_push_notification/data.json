@@ -1,0 +1,17 @@
+{
+  "to": "/topics/all",
+  "priority": "high",
+  "notification" : {
+      "title" : "テスト Title",
+      "body" : "テスト Body",
+      "android_channel_id" : "{channel}",
+      "icon": "notification_icon"
+  },
+  "data" : {
+      "id" : "1001",
+      "message" : "message 文字列",
+      "metadata" : "metadata 文字列",
+      "click_action": "FLUTTER_NOTIFICATION_CLICK",
+      "icon": "notification_icon"
+  }
+}
