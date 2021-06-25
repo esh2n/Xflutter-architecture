@@ -1,0 +1,14 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_ChildUser _$_$_ChildUserFromJson(Map json) {
+  return _$_ChildUser(
+    isSingle: json['isSingle'] as bool,
+  );
+}
+
+Map<String, dynamic> _$_$_ChildUserToJson(_$_ChildUser instance) =>
+    <String, dynamic>{
+      'isSingle': instance.isSingle,
+    };

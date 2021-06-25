@@ -1,0 +1,13 @@
+# https://pub.dev/packages/pedantic_mono
+include: package:pedantic_mono/analysis_options.yaml
+analyzer:
+  # enable-experiment:
+  #   - nonfunction-type-aliases
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+
+linter:
+  rules:
+    # flavorの自動生成ファイルのため無効化
+    file_names: false

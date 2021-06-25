@@ -1,0 +1,16 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Message _$_$_MessageFromJson(Map json) {
+  return _$_Message(
+    id: json['id'] as int,
+    body: json['body'] as String,
+  );
+}
+
+Map<String, dynamic> _$_$_MessageToJson(_$_Message instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'body': instance.body,
+    };
