@@ -1,0 +1,8 @@
+#!/bin/bash
+cd ../../ && \
+flutter pub get && \
+flutter pub run flutter_flavorizr -p assets:download,assets:extract,android:androidManifest,android:buildGradle,android:dummyAssets,ios:xcconfig,ios:buildTargets,ios:schema,ios:dummyAssets,ios:plist,ios:launchScreen,google:firebase,assets:clean,ide:config && \
+# flutter pub run flutter_launcher_icons:main && \
+flutter clean && \
+flutter pub get && \
+echo 'done';

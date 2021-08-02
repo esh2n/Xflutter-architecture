@@ -1,0 +1,18 @@
+#!/bin/bash
+
+DEV_KEY="AAAA"
+STG_KEY="AAAA"
+case $1 in
+"dev" )
+  AUTH_KEY=$DEV_KEY;;
+"staging" )
+  AUTH_KEY=$STG_KEY;;
+"production" )
+  echo '🙇‍♂️本番環境への通知はこちら ===> https://console.firebase.google.com/u/6/project/port-1570692542155/overview'
+  exit 0;;
+esac
+
+curl -X POST --header "Authorization: key=$AUTH_KEY" \
+--Header "Content-Type: application/json" \
+https://fcm.googleapis.com/fcm/send \
+-d @data.json

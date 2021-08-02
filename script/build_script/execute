@@ -1,0 +1,5 @@
+#!/bin/bash
+cd ../../ && \
+flutter pub get && \
+echo "running on $1";
+flutter run --debug --flavor $1 --target lib/main-$1.dart

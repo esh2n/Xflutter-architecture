@@ -1,0 +1,6 @@
+#!/bin/bash
+cd ../../ && \
+flutter clean && \
+flutter pub pub cache repair && \
+flutter pub get && \
+echo 'done';
